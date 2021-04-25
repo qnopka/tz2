@@ -1,0 +1,81 @@
+.footer {
+  padding: 0 $gap;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+
+
+  color: $color-light;
+  background-color: rgba($color-dark, .5);
+
+  &__container {
+    display: grid;
+
+    @extend %container;
+    justify-items: self-end;
+    align-items: center;
+    grid-gap: 2 * $gap;
+
+    @include lg-min {
+      grid-template-columns: auto auto 1fr;
+    }
+    @include xl-md {
+      grid-template-columns: auto auto 1fr;
+    }
+    @include md {
+      grid-template-columns: auto;
+      justify-items: center;
+      grid-template-rows: $gap;
+      grid-gap: 5px;
+    }
+  }
+
+  &__title {
+    display: block;
+
+    margin-right: -0.5em;
+
+    text-align: center;
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+
+    color: $color-gray;
+
+    font-weight: 100;
+
+    &--accent {
+      display: block;
+
+      margin-left: -16px;
+
+      letter-spacing: 0.05em;
+
+      color: #e5e5e5;
+
+      font-weight: 700;
+    }
+  }
+
+  &__social {
+    display: grid;
+    justify-content: center;
+
+    padding: 10px 0 14px $gap;
+    grid-gap: 10px;
+
+    grid-template-columns: repeat(7, auto);
+
+    .fab,
+    .fas{
+      font-size: 2rem;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: $color-accent;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+

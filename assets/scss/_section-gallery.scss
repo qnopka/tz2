@@ -1,0 +1,112 @@
+.gallery {
+  padding: $gap;
+
+  @include sm {
+    padding: $gap;
+  }
+
+  &__container {
+    display: grid;
+
+    @include lg-min {
+      grid-gap: $gap;
+      grid-template-areas: "a1 a1 a1 a2"
+                            "a1 a1 a1 a3"
+                            "a1 a1 a1 a4"
+                            "a5 a6 a7 a8"
+                            "a9 a12 a12 a12"
+                            "a10 a12 a12 a12"
+                            "a11 a12 a12 a12";
+
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include xl-md {
+      grid-gap: 10px;
+      grid-template-areas: "a1 a1 a2"
+      "a3 a3 a4"
+      "a5 a5 a6"
+      "a7 a7 a8"
+      "a9 a9 a10"
+      "a11 a11 a12";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+      font-size: 1.125rem;
+
+      grid-gap: 10px;
+      grid-template-areas: "a1 a1 a1"
+      "a2 a3 a4"
+      "a5 a5 a5"
+      "a6 a7 a8"
+      "a9 a9 a9"
+      "a10 a11 a12";
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    padding-top: $gap;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-gray-light;
+
+  @media (min-height: 1080px) {
+    min-height: calc(33.333vh - 13.333px);
+  }
+
+  @media (min-height: 640px) {
+    min-height: calc(40vh - 13.333px);
+  }
+
+  @media (max-height: 691px - 0.2) {
+    min-height: calc(230px - 20px * 0.66);
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-gray-light;
+    opacity: 0.5;
+
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/1000x600.png");
+
+    transition: transform 0.5s;
+
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  &:hover .gallery-item__overlay {
+    opacity: 0.7;
+  }
+
+  &:hover .gallery-item__image {
+    transform: scale(1.1);
+  }
+}
+
+@for $i from 1 through 12 {
+  .gallery-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

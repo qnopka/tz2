@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+
+  letter-spacing: 0.1em;
+
+  color: $color-gray;
+
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.15;
+}
+
+:root {
+  --dark-background-color: #2b2b2b;
+  --dark-text-color: #e5e5e5;
+  --light-background-color: #e5e5e5;
+  --light-text-color: #44596e;
+  --grey-background-color: #7e7e7e;
+  --grey-text-color: #e5e5e5;
+}
+
+body.theme-dark {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+}
+
+body.theme-light {
+  --background-color: var(--light-background-color);
+  --text-color: var(--light-text-color);
+}
+
+body.theme-grey {
+  --background-color: var(--grey-background-color);
+  --text-color: var(--grey-text-color);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body.theme-light {
+    --background-color: var(--light-background-color);
+    --text-color: var(--light-text-color);
+  }
+
+  footer body.theme-light {
+    --background-color: var(--light-background-color);
+    --text-color: var(--light-text-color);
+  }
+}
+
+
+@media (prefers-color-scheme: grey) {
+  body.theme-grey {
+    --background-color: var(--grey-background-color);
+    --text-color: var(--grey-text-color);
+  }
+}
+
+@media (min-width: 1080px) {
+  .header-navbar__item {
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header-navbar__item {
+    display: none;
+  }
+}
+
+.button-container {
+  display: none;
+}
+
+@media (min-width: 640px) and (max-width: 1080px) {
+  .button-container {
+    display: block;
+  }
+}
+
+
+@media (min-width: 640px){
+  .theme {
+    display: none;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+  color: $color-light;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+h1 {
+  letter-spacing: 0.1em;
+
+  text-align: center;
+
+  font-family: $font-header;
+  font-weight: 900;
+  line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+
+main {
+  padding: 6vh 0;
+}
