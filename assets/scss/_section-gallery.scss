@@ -73,8 +73,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $color-gray-light;
-    opacity: 0.5;
+    background-color: $color-dark;
+    opacity: 0.3;
 
     transition: opacity 0.5s ease-in-out;
   }
@@ -130,9 +130,10 @@
     color: $color-dark;
   }
   30%{
-    letter-spacing: 10px;
+    letter-spacing: 6px;
   }
   85%{
     letter-spacing: 4px;
   }
 }
+
