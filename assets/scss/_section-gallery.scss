@@ -51,18 +51,6 @@
   background-color: $color-gray-light;
   display: flex;
 
-  &__overlay {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $color-dark;
-    opacity: 0.1;
-    transition: opacity 0.5s ease-in-out;
-  }
-
   &__image {
     background-color: #cfcfcf;
     transition: transform 0.5s;
@@ -87,10 +75,6 @@
       box-sizing:content-box;
 
     }
-  }
-
-  &:hover .gallery-item__overlay {
-    opacity: 0.5;
   }
 
   &:hover .gallery-item__image {
@@ -158,4 +142,53 @@ h1 {
   100% { background-position: 100% 50%; }
 }
 
-
+.minimized {
+  cursor: pointer;
+}
+#magnify {
+  display: none;
+  position: fixed;
+  max-width: 1000px;
+  padding: $gap;
+  height: auto;
+  z-index: 9999;
+}
+#magnify img {
+  width: 100%;
+}
+#overlay {
+  display: none;
+  background: $color-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 9990;
+}
+#close-popup {
+  width: 30px;
+  height: 30px;
+  background: $color-light;
+  border: 1px solid $color-gray;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#close-popup i {
+  width: 30px;
+  height: 30px;
+  background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+  background-size: 16px 16px;
+  display: block;
+}
+@keyframes rota {
+  25% { transform: rotate(360deg); }
+}
+#close-popup:hover {
+  animation: rota 4s infinite normal;
+  animation-iteration-count: 1;
+}
