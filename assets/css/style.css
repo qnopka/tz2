@@ -584,7 +584,7 @@ main {
   position: relative;
   overflow: hidden;
   background-color: #e5e5e5;
-  min-height: calc(25vh - 13.333px);
+  min-height: calc(25vw - 13.333px);
 }
 
 .gallery-item__overlay {
@@ -883,16 +883,15 @@ body {
 }
 
 @media (max-width: 767.8px) {
+  .header-menu__container, .footer__container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
   h1 {
     font-size: 1.875rem;
   }
   .header-navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin-top: -10px;
   }
   .header-navbar__list {
     text-align: right;
@@ -922,7 +921,7 @@ body {
 
 @media (max-height: 640px) {
   .gallery-item {
-    min-height: calc(33vh - 13.333px);
+    min-height: calc(33vw - 13.333px);
   }
 }
 
