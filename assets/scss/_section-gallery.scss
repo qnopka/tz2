@@ -1,8 +1,8 @@
 .gallery {
-  padding: $gap;
+  padding: $gap $gap (2 * $gap) $gap;
 
-  @include sm {
-    padding: $gap;
+  @include md {
+    padding: $gap $gap (3 * $gap) $gap;
   }
 
   &__container {
@@ -58,12 +58,10 @@
   background-color: $color-gray-light;
   min-height: calc(25vh - 13.333px);
 
-  @media (min-height: 1080px) {
-    min-height: calc(15.5vh - 13.333px);
-  }
+
 
   @media (max-height: 640px) {
-    min-height: calc(25.5vh - 13.333px);
+    min-height: calc(33vh - 13.333px);
   }
 
   &__overlay {
@@ -85,7 +83,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("../img/1000x600.png");
+    background-image: url("https://qnopka.github.io/tz2/assets/img/1000x600.png");
 
     transition: transform 0.5s;
 
@@ -130,7 +128,7 @@
     color: $color-dark;
   }
   30%{
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
   85%{
     letter-spacing: 4px;

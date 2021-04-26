@@ -563,7 +563,7 @@ main {
 }
 
 .gallery {
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
 }
 
 .gallery__container {
@@ -607,7 +607,7 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("../img/1000x600.png");
+  background-image: url("https://qnopka.github.io/tz2/assets/img/1000x600.png");
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
@@ -696,7 +696,7 @@ main {
     color: #000000;
   }
   30% {
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
   85% {
     letter-spacing: 4px;
@@ -708,7 +708,7 @@ main {
     color: #000000;
   }
   30% {
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
   85% {
     letter-spacing: 4px;
@@ -836,12 +836,6 @@ body {
   }
 }
 
-@media (min-height: 1080px) {
-  .gallery-item {
-    min-height: calc(15.5vh - 13.333px);
-  }
-}
-
 @media (min-width: 1080px) {
   .header-navbar__item {
     display: block;
@@ -884,6 +878,9 @@ body {
     text-align: right;
     background-color: rgba(99, 117, 136, 0.9);
   }
+  .gallery {
+    padding: 20px 20px 60px 20px;
+  }
   .gallery__container {
     font-size: 1.125rem;
     grid-gap: 10px;
@@ -905,7 +902,7 @@ body {
 
 @media (max-height: 640px) {
   .gallery-item {
-    min-height: calc(25.5vh - 13.333px);
+    min-height: calc(33vh - 13.333px);
   }
 }
 
@@ -918,9 +915,6 @@ body {
   }
   .header-menu__container {
     grid-template-columns: auto auto;
-  }
-  .gallery {
-    padding: 20px;
   }
   .footer__social .fab,
   .footer__social .fas {
