@@ -505,7 +505,7 @@ a {
 }
 
 a:hover {
-  color: #5263e7;
+  color: #ee5100;
 }
 
 h1 {
@@ -715,6 +715,26 @@ main {
   }
 }
 
+h1 span {
+  text-shadow: 0 0 2px rgba(99, 117, 136, 0.2);
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textAnimation 80s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes textAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .footer {
   padding: 0 20px;
   position: fixed;
@@ -769,7 +789,7 @@ main {
 
 .footer__social .fab:hover,
 .footer__social .fas:hover {
-  color: #5263e7;
+  color: #ee5100;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
