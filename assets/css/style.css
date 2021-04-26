@@ -550,6 +550,10 @@ main {
   grid-template-columns: auto 1fr;
 }
 
+.header-navbar {
+  margin-top: -10px;
+}
+
 .header-navbar__list {
   margin: 0 0 -20px 0;
   padding: 0;
@@ -764,6 +768,10 @@ h1 span {
   font-weight: 100;
 }
 
+.footer__contscts {
+  text-align: center;
+}
+
 .footer__contact {
   display: inline-block;
   font-weight: 400;
@@ -890,12 +898,8 @@ body {
   h1 {
     font-size: 1.875rem;
   }
-  .header-navbar {
-    margin-top: -10px;
-  }
   .header-navbar__list {
     text-align: right;
-    background-color: rgba(99, 117, 136, 0.9);
   }
   .gallery {
     padding: 20px 20px 60px 20px;
