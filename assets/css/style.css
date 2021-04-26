@@ -936,7 +936,7 @@ body {
 @media (max-width: 1199.8px) and (min-width: 768px) {
   .gallery__container {
     grid-gap: 10px;
-    grid-template-areas: "a1 a1 a2" "a3 a3 a4" "a5 a5 a6" "a7 a7 a8" "a9 a9 a10" "a11 a11 a12";
+    grid-template-areas: "a1 a1 a2" "a1 a1 a3" "a4 a4 a5" "a4 a4 a6" "a7 a7 a8" "a7 a7 a9" "a10 a10 a11" "a10 a10 a12";
     grid-template-columns: repeat(3, 1fr);
   }
 }
