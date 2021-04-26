@@ -584,7 +584,7 @@ main {
   position: relative;
   overflow: hidden;
   background-color: #e5e5e5;
-  min-height: calc(25vw - 13.333px);
+  min-height: calc(25vh - 13.333px);
 }
 
 .gallery-item__overlay {
