@@ -3,16 +3,21 @@
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: $gap;
-  background-color: rgba($color-dark, .5);
+  padding: 10px $gap;
+  background-color: rgba($color-dark, .7);
   color: $color-light;
   z-index: 99;
-  height: 10vh;
-
+  border-bottom: 3px solid $color-dark;
+  box-shadow: 2px 13px 15px -1px rgba($color-dark, 0.2);
 }
 
 .header-logo {
   font-size: 1.5rem;
+  padding: 10px 0 0 10px;
+
+  @include sm {
+    font-size: 1rem;
+  }
 }
 
 .header-menu {
@@ -23,15 +28,11 @@
     display: grid;
     align-items: center;
 
-    padding-right: 0;
-    padding-bottom: $gap;
-    padding-left: 0;
-
     @extend %container;
     grid-template-columns: auto 1fr;
 
     @include sm {
-      grid-template-columns: auto;
+      grid-template-columns: auto auto;
     }
   }
 }

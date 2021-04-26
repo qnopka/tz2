@@ -8,20 +8,21 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700%7CRoboto:100,300,400,500,700,900"
         rel="stylesheet">
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <title>Test 2</title>
 </head>
 <body>
 
-  <header class="header">
+  <header class="header wow animated slideInDown">
 
     <nav class="header-menu">
 
       <div class="header-menu__container">
 
         <div class="header-logo">
-          <a class="header-logo__link" href="index.html">
+          <a class="header-logo__link wow animated fadeInUp" data-wow-delay="0.3s" href="index.html">
             Backendless
           </a>
         </div>
@@ -31,29 +32,29 @@
           <div class="header-navbar__list">
 
             <select class="theme">
-              <option value="light">Light Theme</option>
-              <option value="dark">Dark Theme</option>
-              <option value="grey">Grey Theme</option>
+              <option value="light wow animated fadeInUp" data-wow-delay="0.4s">Light Theme</option>
+              <option value="dark wow animated fadeInUp" data-wow-delay="0.5s">Dark Theme</option>
+              <option value="grey wow animated fadeInUp" data-wow-delay="0.6s" selected>Grey Theme</option>
             </select>
 
             <div class="button-container">
-              <button class="button theme-light">Light Theme</button>
-              <button class="button theme-dark">Dark Theme</button>
-              <button class="button theme-grey">Grey Theme</button>
+              <button class="button theme-light wow animated fadeInUp" data-wow-delay="0.4s">Light Theme</button>
+              <button class="button theme-dark wow animated fadeInUp" data-wow-delay="0.5s">Dark Theme</button>
+              <button class="button theme-grey wow animated fadeInUp" data-wow-delay="0.6s">Grey Theme</button>
             </div>
 
-            <div class="header-navbar__item">
+            <div class="header-navbar__item wow animated fadeInUp" data-wow-delay="0.4s">
               <input type="radio" id="lightTheme" name="theme" value="light" class="theme-light" onclick="goLight()">
               <label for="lightTheme">Light Theme</label>
             </div>
 
-            <div class="header-navbar__item theme-dark">
+            <div class="header-navbar__item theme-dark wow animated fadeInUp" data-wow-delay="0.5s">
               <input type="radio" id="darkTheme" name="theme" value="dark" class="theme-dark" onclick="goDark()">
               <label for="darkTheme">Dark Theme</label>
             </div>
 
-            <div class="header-navbar__item theme-grey">
-              <input type="radio" id="greyTheme" name="theme" value="grey" onclick="goGrey()">
+            <div class="header-navbar__item theme-grey wow animated fadeInUp" data-wow-delay="0.6s">
+              <input type="radio" id="greyTheme" name="theme" value="grey" onclick="goGrey()" checked>
               <label for="greyTheme">Grey Theme</label>
             </div>
 
@@ -67,65 +68,69 @@
 
   <main>
     <section class="gallery">
-      <h1>Backendless Gallery</h1>
+
+      <div class="gallery__title">
+        <h1 class="text">Backendless Gallery</h1>
+      </div>
+
       <div class="gallery__container">
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.1s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.2s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.3s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.4s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.5s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.6s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.7s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.8s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.9s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.10s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.11s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
 
-        <article class="gallery-item">
+        <article class="gallery-item wow animated fadeInUp" data-wow-delay="0.12s">
           <div class="gallery-item__overlay"></div>
           <div class="gallery-item__image"></div>
         </article>
@@ -135,13 +140,15 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer wow animated slideInUp">
     <div class="footer__container">
-      <div class="footer__title">
-        <a href="https://backendless.com/">Backendless</a>
-      </div>
       <div class="footer__contacts">
-        <a href="tel:55555555">555-55-55</a>
+        <div class="footer__title">
+          <a href="https://backendless.com/">Backendless</a>
+        </div>
+        <div class="footer__contact">
+          <a href="tel:55555555">555-55-55</a>
+        </div>
       </div>
       <nav class="footer__social">
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -155,7 +162,20 @@
     </div>
 
   </footer>
-  <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script>
+
+    wow = new WOW( {
+              boxClass:     'wow',
+              animateClass: 'animated',
+              offset:       50,
+              live:         true,
+            }
+    );
+
+    wow.init();
+
+  </script>
 </body>
 </html>

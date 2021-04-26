@@ -1,0 +1,50 @@
+body.theme-dark {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+}
+
+body.theme-light {
+  --background-color: var(--light-background-color);
+  --text-color: var(--light-text-color);
+}
+
+body.theme-grey {
+  --background-color: var(--grey-background-color);
+  --text-color: var(--grey-text-color);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.bg-grey {
+  background-color: var(--grey-background-color);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body.theme-light {
+    --background-color: var(--light-background-color);
+    --text-color: var(--light-text-color);
+  }
+
+  body.theme-light > footer {
+    filter: invert(80%);
+  }
+}
+
+
+@media (prefers-color-scheme: grey) {
+  body.theme-grey {
+    --background-color: var(--grey-background-color);
+    --text-color: var(--grey-text-color);
+  }
+}

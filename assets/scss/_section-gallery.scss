@@ -56,17 +56,14 @@
   position: relative;
   overflow: hidden;
   background-color: $color-gray-light;
+  min-height: calc(25vh - 13.333px);
 
   @media (min-height: 1080px) {
-    min-height: calc(33.333vh - 13.333px);
+    min-height: calc(15.5vh - 13.333px);
   }
 
-  @media (min-height: 640px) {
-    min-height: calc(40vh - 13.333px);
-  }
-
-  @media (max-height: 691px - 0.2) {
-    min-height: calc(230px - 20px * 0.66);
+  @media (max-height: 640px) {
+    min-height: calc(25.5vh - 13.333px);
   }
 
   &__overlay {
@@ -108,5 +105,34 @@
 @for $i from 1 through 12 {
   .gallery-item:nth-of-type(#{$i}) {
     grid-area: a#{$i};
+  }
+}
+
+
+.gallery__title {
+  text-align: center;
+}
+
+.gallery__title h1{
+  text-transform: uppercase;
+  display: block;
+}
+
+.text{
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: text 3s infinite;
+
+}
+
+@keyframes text{
+  0%{
+    color: $color-dark;
+  }
+  30%{
+    letter-spacing: 10px;
+  }
+  85%{
+    letter-spacing: 4px;
   }
 }

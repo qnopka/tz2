@@ -7,69 +7,14 @@ html {
 
   letter-spacing: 0.1em;
 
-  color: $color-gray;
+  color: $color-light;
 
   font-family: $font-main;
   font-size: $font-size;
   line-height: 1.15;
 }
 
-:root {
-  --dark-background-color: #2b2b2b;
-  --dark-text-color: #e5e5e5;
-  --light-background-color: #e5e5e5;
-  --light-text-color: #44596e;
-  --grey-background-color: #7e7e7e;
-  --grey-text-color: #e5e5e5;
-}
 
-body.theme-dark {
-  --background-color: var(--dark-background-color);
-  --text-color: var(--dark-text-color);
-}
-
-body.theme-light {
-  --background-color: var(--light-background-color);
-  --text-color: var(--light-text-color);
-}
-
-body.theme-grey {
-  --background-color: var(--grey-background-color);
-  --text-color: var(--grey-text-color);
-}
-
-body {
-  background: var(--background-color);
-  color: var(--text-color);
-}
-
-
-@media (prefers-color-scheme: dark) {
-  body.theme-dark {
-    --background-color: var(--dark-background-color);
-    --text-color: var(--dark-text-color);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body.theme-light {
-    --background-color: var(--light-background-color);
-    --text-color: var(--light-text-color);
-  }
-
-  footer body.theme-light {
-    --background-color: var(--light-background-color);
-    --text-color: var(--light-text-color);
-  }
-}
-
-
-@media (prefers-color-scheme: grey) {
-  body.theme-grey {
-    --background-color: var(--grey-background-color);
-    --text-color: var(--grey-text-color);
-  }
-}
 
 @media (min-width: 1080px) {
   .header-navbar__item {
@@ -109,11 +54,11 @@ a {
   &:hover {
     color: $color-accent;
   }
+
 }
 
 h1 {
   letter-spacing: 0.1em;
-
   text-align: center;
 
   font-family: $font-header;
@@ -133,4 +78,10 @@ h1 {
 
 main {
   padding: 6vh 0;
+}
+
+select {
+  @include sm {
+    font-size: 1rem;
+  }
 }

@@ -1,4 +1,5 @@
 function applyTheme(theme) {
+    body.className = "";
   document.body.classList.remove("theme-light", "theme-dark", "theme-grey");
   document.body.classList.add(`theme-${theme}`);
 }
@@ -10,12 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-let body = document.querySelector("body"),
+let body = document.querySelector("body");
+    body.className = "bg-grey";
     goLight = function() {
+        body.className = "";
         body.classList.add("theme-light");
     },
-    goDark = function() {
-      body.className = "";
+goDark = function() {
+        body.className = "";
       body.classList.add("theme-dark");
     },
     goGrey = function() {
@@ -26,4 +29,3 @@ let body = document.querySelector("body"),
 document.querySelector(".theme-light").addEventListener("click", goLight, false);
 document.querySelector(".theme-dark").addEventListener("click", goDark, false);
 document.querySelector(".theme-grey").addEventListener("click", goGrey, false);
-
