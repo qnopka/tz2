@@ -95,30 +95,6 @@
   text-align: center;
 }
 
-.gallery__title h1{
-  text-transform: uppercase;
-  display: block;
-}
-
-.text{
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-  animation: text 3s infinite;
-
-}
-
-@keyframes text{
-  0%{
-    color: $color-dark;
-  }
-  30%{
-    letter-spacing: 5px;
-  }
-  85%{
-    letter-spacing: 4px;
-  }
-}
-
 
 
 h1 {

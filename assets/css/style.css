@@ -677,42 +677,6 @@ main {
   text-align: center;
 }
 
-.gallery__title h1 {
-  text-transform: uppercase;
-  display: block;
-}
-
-.text {
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-  -webkit-animation: text 3s infinite;
-          animation: text 3s infinite;
-}
-
-@-webkit-keyframes text {
-  0% {
-    color: #000000;
-  }
-  30% {
-    letter-spacing: 5px;
-  }
-  85% {
-    letter-spacing: 4px;
-  }
-}
-
-@keyframes text {
-  0% {
-    color: #000000;
-  }
-  30% {
-    letter-spacing: 5px;
-  }
-  85% {
-    letter-spacing: 4px;
-  }
-}
-
 h1 span {
   text-shadow: 0 0 2px rgba(99, 117, 136, 0.2);
   background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
